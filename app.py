@@ -98,7 +98,7 @@ st.markdown("""
     [data-testid="stSidebarCollapseButton"] button,
     [data-testid="stSidebarCollapseButton"] button[class*="st-emotion-cache-"] {
         opacity: 1 !important;
-        background: transparent !important;
+        # background: transparent !important;
         color: #000 !important;
         box-shadow: none !important;
         border: none !important;
@@ -1728,4 +1728,11 @@ elif page == "Summary & Conclusion":
     and enable airlines to understand competitor pricing dynamics.
     """)
 
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
